@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STATUS=$(script -q -c "nxcli status -f" /dev/null 2>&1)
+STATUS=$(script -q -c "nxcli status" /dev/null 2>&1)
 
 # Check if the output contains the "disconnected" keyword
 if echo "$STATUS" | grep -q "disconnected"; then
