@@ -1,3 +1,7 @@
+# Add scripts to $PATH
+Edit the files `~/.bashrc]` `[~/.config/uwsm/env]` </br>
+```export PATH=/path/to/repo}/bin:$PATH```
+
 # Searchable Applications
 stored in /home/yori/.local/share/applications/
 
