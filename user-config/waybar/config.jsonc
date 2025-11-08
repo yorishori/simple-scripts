@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "reload_style_on_change": true,
-  "modules-left": ["custom/omarchy","clock","custom/update","custom/screen-recording","tray"],
+  "modules-left": ["custom/omarchy","clock","custom/update","custom/screenrecording-indicator","tray"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["custom/vpn","bluetooth","network","pulseaudio","cpu"],
 
@@ -67,7 +67,7 @@
   
   "cpu": {
     "format": "󰍛",
-    "interva": 5,
+    "interval": 5,
     "on-click": "xdg-terminal-exec btop"
   },
 

@@ -91,7 +91,7 @@ window#waybar{
   color:@color-text;
 }
 
-#cup:hover,
+#cpu:hover,
 #network:hover,
 #bluetooth:hover,
 #pulseaudio:hover,
