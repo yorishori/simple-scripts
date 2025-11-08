@@ -1,0 +1,121 @@
+@import url('../../.custom/waybar-color.css');
+
+* {
+  font-size:12px;
+  font-family: "CaskaydiaMono Nerd Font Propo";
+}
+
+window#waybar{
+  all:unset;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  padding:5px 10px;
+  margin:5px 20px;
+  border-radius:15px;
+  background: alpha(@background,.6);
+}
+
+
+
+#custom-omarchy:hover
+#clock:hover,
+#custom-update:hover,
+#tray:hover
+{
+  transition: all .1s ease;
+  color:@color-active;
+}
+
+#custom-omarchy{
+  padding: 0px 5px;
+  color:@color-text;
+}
+
+#clock{
+  padding: 0px 5px;
+  color:@color-text;
+  transition: all .3s ease;
+  font-weight:bolder;
+  margin: 0px 8px;
+}
+
+#custom-update{
+  padding: 0px 5px;
+  color: @color-text;
+}
+
+#tray{
+  padding: 0px 5px;
+  color: @color-text;
+}
+
+#workspaces {
+    padding: 0px 5px;
+}
+#workspaces button {
+    all:unset;
+    padding: 0px 5px;
+    color: @color-active;
+    transition: all .2s ease;
+    text-shadow: 0px 0px 2px @color-active; 
+}
+#workspaces button:hover {
+    color: alpha(@color-active, 0.2)
+}
+#workspaces button.active {
+    color: @color-green;
+
+}
+#workspaces button.empty {
+    color: @background
+}
+#workspaces button.empty:hover {
+    color: alpha(@color-green,0.5);
+}
+#workspaces button.empty.active {
+    color: @color-green;
+
+}
+
+
+#cpu,
+#network,
+#bluetooth,
+#pulseaudio,
+#custom-vpn{
+  padding: 0px 10px;
+  transition: all .3s ease; 
+  color:@color-text;
+}
+
+#cup:hover,
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#custom-vpn:hover
+{
+  transition: all .1s ease;
+  color:@color-active;
+}
+
+#custom-vpn {
+    color: alpha(@color-text, 0.6);
+    margin-right:8px;
+}
+#custom-vpn.connected {
+  border: 1px solid @color-green;
+  border-radius: 15px;
+  color:  @color-green;
+  font-weight:bolder;
+}
+#custom-vpn.unconnected{
+  border: 1px solid @color-red;
+  border-radius: 15px;
+  color:  @color-red;
+  font-weight: bolder;
+}
+
+

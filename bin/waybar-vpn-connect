@@ -1,0 +1,11 @@
+#!/bin/bash
+
+VPN_COMMAND="nxcli status"
+STATUS=$($VPN_COMMAND 2>&1)
+
+# Check if the output contains the "disconnected" keyword
+if echo "$STATUS" | grep -q "disconnected"; then
+  exec setsid uwsm-app -- alacritty -o font.size=9 --class=waybar-vpn-connect --title=NetExtender -e bash -c "nxcli connect ahora; omarchy-show-done"
+else
+  exec setsid uwsm-app -- alacritty -o font.size=9 --class=waybar-vpn-connect --title=NetExtender -e bash -c "nxcli disconnect; omarchy-show-done"
+fi

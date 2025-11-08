@@ -1,0 +1,13 @@
+#!/bin/bash
+
+STATUS=$(script -q -c "nxcli status -f" /dev/null 2>&1)
+
+# Check if the output contains the "disconnected" keyword
+if echo "$STATUS" | grep -q "disconnected"; then
+  echo "{\"text\":\"VPN\",\"tooltip\":\"No Active VPN\"}"
+elif echo "$STATUS" | grep -q " connected"; then
+  TOOLTIP_CONTENT=$(echo "$STATUS" | sed -e ':a' -e 'N' -e '$!ba' -e 's/\t/\\t/g' -e 's/\n/\\n/g')
+  echo "{\"text\":\"VPN\",\"tooltip\":\"$TOOLTIP_CONTENT\",\"class\":\"connected\"}"
+else 
+  echo "{\"text\":\"VPN\",\"tooltip\":\"VPN hasn't connected yet, click to disconnect\",\"class\":\"unconnected\"}" 
+fi
