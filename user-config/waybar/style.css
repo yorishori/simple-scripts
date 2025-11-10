@@ -1,4 +1,4 @@
-@import url('../../.custom/waybar-color.css');
+@import url('./waybar-color.css');
 
 * {
   font-size:12px;
